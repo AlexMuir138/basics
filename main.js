@@ -21,3 +21,15 @@ document.getElementById("scoreboard").classList.add("hidden")
 startClock()
   setTimeout(stopGame, gameLength)
 }
+
+function stopGame(){
+  console.log("GAME OVER")
+
+  document.getElementById("main-controls").classList.remove("hidden")
+  document.getElementById("game-controls").classList.add("hidden")
+  document.getElementById("scoreboard").classList.remove("hidden")
+
+  clickCount = 0
+  height = 120
+  width = 100
+}
