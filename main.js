@@ -12,3 +12,12 @@ let timeRemaining = 0
 let currentPlayer = {}
 let currentColor = "red"
 let possibleColors = ["red", "green", "blue", "purple", "pink"]
+
+function startGame(){
+document.getElementById("game-controls").classList.remove("hidden")
+document.getElementById("main-controls").classList.add("hidden")
+document.getElementById("scoreboard").classList.add("hidden")
+
+startClock()
+  setTimeout(stopGame, gameLength)
+}
