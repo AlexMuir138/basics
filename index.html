@@ -13,6 +13,46 @@
     Bootstrap Balloon Pop!
     <button class="btn btn-primary"> Click Me!</button>
   </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div id="main-controls" class="d-flex space-around mt-2">
+        <button class="btn-secondary mx-3 rounded" onclick="changePlayer()">Change Player</button>
+        <button class="btn btn-primary mx-3" id="start-button" onclick="startGame()"> START GAME</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row hidden" id="game-controls">
+    <div class="col-12">
+
+      <div id="game-controls" class="hidden">
+    
+        <div>
+          <span>Balloons Popped:</span>
+          <span id="pop-count">0</span>
+          </div>
+        
+        <div>
+          <span>Time Remaining:</span>
+          <span id="countdown">0</span>
+          </div>
+    
+          <div class="game-container d-flex">
+            <div class="pump" onclick="inflate()">
+              <div class="handle"></div>
+              <div class="pump-box">
+                <span id="click-count"></span>
+              </div>
+            </div>
+            <div id="balloon" class="balloon"> </div>
+            <audio id="pop-sound" src="burst.mp3"></audio>
+          </div>
+         
+        </div>
+    </div>
+  </div>
+
 </div>
 </body>
 </html>
