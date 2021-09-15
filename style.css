@@ -16,7 +16,43 @@ body{
   font-size: 16pt;
   color: var(--text-color);
   }
+  button:hover{
+    scale: ;
+  }
 
+  img{
+    max-width: 100%;
+  }
+
+
+  .balloon{
+    height: 120px;
+    width: 100px;
+    background-color: blue;
+    border-radius: 50%;
+    transition: all .2s ease;
+    animation: balloon-float 5s ease-in-out infinite;
+    align-self: flex-end;
+    margin: 0 auto;
+    box-shadow: inset -10px 10px 12px #0000004d;
+    background: linear-gradient(90deg, #430101 0%, #fa1e01 60%, #ff0000 80%);
+  }
+
+  .balloon.green{
+    filter: hue-rotate(130deg);
+  }
+  
+  .balloon.blue{
+    filter: hue-rotate(225deg);
+  }
+  
+  .balloon.purple{
+    filter: hue-rotate(225deg);
+  }
+  
+  .balloon.pink{
+    filter: hue-rotate(325deg);
+  }
 .shadow{
   -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter:drop-shadow(5px 5px 5px #222);
