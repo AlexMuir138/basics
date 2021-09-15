@@ -1,3 +1,22 @@
+:root{
+  --primary: #f393fd;
+  --primary-darken: #c051d0;
+  --bg: rgb(190, 252, 89);
+  --shadow: 2px 0 8px rgba(0,0,0, .3);
+  --corners: 10px;
+  --text-color: rgb(37, 35, 35);
+  --dark: rgb(37, 35, 35);
+  --dark-lighten: rgb(68, 66, 66);
+  --light: rgb(245, 245, 245);
+}
+
+body{
+  background-color: var(--bg);
+  font-family: 'Permanent Marker', cursive;
+  font-size: 16pt;
+  color: var(--text-color);
+  }
+
 .shadow{
   -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter:drop-shadow(5px 5px 5px #222);
