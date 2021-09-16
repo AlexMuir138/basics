@@ -52,12 +52,15 @@ body{
   .balloon.pink{
     filter: hue-rotate(325deg);
   }
-.shadow{
+  .hidden{
+    display: none !important;
+  }
+  .shadow{
   -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter:drop-shadow(5px 5px 5px #222);
-}
+  }
 
-.text:hover{
+  .text:hover{
   cursor: pointer;
   transform: scale(1.1);
-}
+  }
