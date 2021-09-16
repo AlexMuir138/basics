@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Introducing Balloon Pop...With Bootstrap!</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
   <div class="row">
@@ -18,22 +19,22 @@
   <div class="row">
     <div class="col-12 d-flex justify-content-center">
       <form class="d-flex space-between" id="player-form" onsubmit="setPlayer(event)">
-        <div>
+        <div class="pt-3">
           <label for="name">
             <i class="fa fa-user-circle" aria-hidden="true"></i>
             <span>Player Name:</span>
           </label>
           <input type="text" name="playerName" required>
+          <button class="btn btn-info shadow m-2">OK</button>
         </div>
-        <button class="btn btn-info">OK</button>
       </form>
     </div>
   </div>
   <div class="row">
     <div class="col-12 d-flex justify-content-center">
       <div id="main-controls" class="d-flex space-around mt-2">
-        <button class="btn-secondary mx-3 rounded" onclick="changePlayer()">Change Player</button>
-        <button class="btn btn-primary mx-3" id="start-button" onclick="startGame()"> START GAME</button>
+        <button class="btn btn-secondary mx-3 rounded shadow" onclick="changePlayer()">Change Player</button>
+        <button class="btn btn-primary mx-3 shadow" id="start-button" onclick="startGame()"> START GAME</button>
       </div>
     </div>
   </div>
@@ -66,6 +67,12 @@
          
         </div>
     </div>
+  </div>
+
+  <div id="scoreboard" class="card mx-5 shadow">
+    <h3 class="text-center">Scoreboard</h3>
+    <div id="players"></div>
+    
   </div>
   <script src="main.js"></script>
 
