@@ -38,6 +38,20 @@ function startClock(){
   drawClock()
   clockId = setInterval(drawClock, 1000)
 }
+function stopClock(){
+  clearInterval(clockId)
+}
+function inflate() {
+  clickCount++
+  height += inflationRate
+  width += inflationRate
+  checkBalloonPop()
+  draw()
+}
+function getRandomColor(){
+  let i = Math.floor(Math.random() * possibleColors.length);
+  currentColor = possibleColors[i]
+}
 function draw(){
   let balloonElement = document.getElementById("balloon")
   let clickCountElem = document.getElementById("click-count")
