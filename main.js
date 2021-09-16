@@ -27,6 +27,20 @@ function startClock(){
 function stopClock(){
   clearInterval(clockId)
 }
+
+function drawClock(){
+  let countdownElem = document.getElementById('countdown')
+  countdownElem.innerText = (timeRemaining / 1000).toString()
+  timeRemaining -= 1000
+}
+
+function inflate() {
+  clickCount++
+  height += inflationRate
+  width += inflationRate
+  checkBalloonPop()
+  draw()
+}
 function stopGame(){
   console.log("GAME OVER")
 
