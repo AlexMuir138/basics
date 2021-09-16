@@ -33,6 +33,11 @@ function stopGame(){
   height = 120
   width = 100
 }
+function startClock(){
+  timeRemaining = gameLength
+  drawClock()
+  clockId = setInterval(drawClock, 1000)
+}
 function draw(){
   let balloonElement = document.getElementById("balloon")
   let clickCountElem = document.getElementById("click-count")
