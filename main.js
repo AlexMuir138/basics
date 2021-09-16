@@ -52,3 +52,24 @@ function stopGame(){
   height = 120
   width = 100
 }
+
+function drawScoreboard(){
+  let template = ""
+
+  players.sort((p1, p2) => p2.topScore - p1.topScore)
+  players.forEach(player => {
+    template += `
+    <div class="d-flex space-between">
+        <span>
+          <i class="fa fa-user"></i>
+         ${player.name}
+        </span>
+        <span>Score: ${player.topScore}</span>
+      </div>
+    `
+  })
+
+  document.getElementById("players").innerHTML = template
+}
+
+drawScoreboard()
