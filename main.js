@@ -18,29 +18,10 @@ document.getElementById("game-controls").classList.remove("hidden")
 document.getElementById("main-controls").classList.add("hidden")
 document.getElementById("scoreboard").classList.add("hidden")
 
-function startClock(){
-  timeRemaining = gameLength
-  drawClock()
-  clockId = setInterval(drawClock, 1000)
+startClock()
+  setTimeout(stopGame, gameLength)
 }
 
-function stopClock(){
-  clearInterval(clockId)
-}
-
-function drawClock(){
-  let countdownElem = document.getElementById('countdown')
-  countdownElem.innerText = (timeRemaining / 1000).toString()
-  timeRemaining -= 1000
-}
-
-function inflate() {
-  clickCount++
-  height += inflationRate
-  width += inflationRate
-  checkBalloonPop()
-  draw()
-}
 function stopGame(){
   console.log("GAME OVER")
 
@@ -52,7 +33,21 @@ function stopGame(){
   height = 120
   width = 100
 }
+function changePlayer(){
+  document.getElementById("player-form").classList.remove("hidden")
+  document.getElementById("game").classList.add("hidden")
+}
 
+function savePlayers(){
+  window.localStorage.setItem("players", JSON.stringify(players))
+}
+
+function loadPlayers(){
+  let playersData = JSON.parse(window.localStorage.getItem("players"))
+  if (playersData) {
+    players = playersData
+  }
+}
 function drawScoreboard(){
   let template = ""
 
