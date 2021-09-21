@@ -23,6 +23,60 @@ body{
     max-width: 100%;
   }
 
+  .game-container{
+    height: 300px;
+    }
+    
+    .pump{
+      margin-top: 80px;
+      height: 130px;
+      width: 180px;
+      position: relative;
+      align-self: flex-end;
+    }
+    
+    .handle{
+      height: 10px;
+      width: 80px;
+      background-color: var(--dark-lighten);
+      position: absolute;
+      top: -80px;
+      left: 50px;
+      display: flex;
+      justify-content: center;
+      transition: all .1s linear;
+      z-index: 1;
+    }
+    
+    .handle::before{
+      content: "";
+      background-color: var(--dark-lighten);
+      width: 10px;
+      height: 80px;
+      display: block;
+    }
+    
+    .pump:active .handle{
+      top: -20px;
+    }
+    .pump-box{
+      background-color: var(--primary-darken);
+      height: 130px;
+      width: 180px;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      z-index: 2;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+    }
+    .pump-box span{
+      background-color: antiquewhite;
+      padding: .5em;
+    }
+
 
   .balloon{
     height: 120px;
