@@ -33,6 +33,12 @@ function stopGame(){
   height = 120
   width = 100
 }
+
+function drawClock(){
+  let countdownElem = document.getElementById('countdown')
+  countdownElem.innerText = (timeRemaining / 1000).toString()
+  timeRemaining -= 1000
+}
 function startClock(){
   timeRemaining = gameLength
   drawClock()
@@ -47,6 +53,24 @@ function inflate() {
   width += inflationRate
   checkBalloonPop()
   draw()
+}
+
+function checkBalloonPop(){
+  if(height >= maxsize){
+    console.log("pop the balloon")
+    let balloonElement = document.getElementById("balloon")
+    balloonElement.classList.remove(currentColor)
+    getRandomColor()
+    balloonElement.classList.add(currentColor)
+
+    // @ts-ignore
+    document.getElementById("pop-sound").play()
+
+    currentPopCount++
+    height = 0
+    width = 0
+    
+  }
 }
 function getRandomColor(){
   let i = Math.floor(Math.random() * possibleColors.length);
