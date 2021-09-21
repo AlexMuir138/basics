@@ -106,6 +106,16 @@ body{
   .balloon.pink{
     filter: hue-rotate(325deg);
   }
+
+  @keyframes balloon-float{
+    0%,100% {
+      transform: translate(-25px) rotate(5deg);
+    }
+    50% {
+      transform: translate(0px) rotate(-5deg);
+    }
+  }
+  
   .hidden{
     display: none !important;
   }
