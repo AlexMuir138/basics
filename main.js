@@ -22,7 +22,7 @@ startClock()
   setTimeout(stopGame, gameLength)
 }
 
-function stopGame(){
+function stopGame() {
   console.log("GAME OVER")
 
   document.getElementById("main-controls").classList.remove("hidden")
@@ -32,6 +32,17 @@ function stopGame(){
   clickCount = 0
   height = 120
   width = 100
+
+  if(currentPopCount > currentPlayer.topScore){
+    currentPlayer.topScore = currentPopCount
+    savePlayers()
+  }
+
+  currentPopCount = 0
+
+  stopClock()
+  draw()
+  drawScoreboard()
 }
 
 function drawClock(){
