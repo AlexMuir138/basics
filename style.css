@@ -19,9 +19,7 @@ body{
 
   
 
-  img{
-    max-width: 100%;
-  }
+ 
 
   .game-container{
     height: 300px;
@@ -115,7 +113,7 @@ body{
       transform: translate(0px) rotate(-5deg);
     }
   }
-  
+
   .hidden{
     display: none !important;
   }

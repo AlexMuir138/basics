@@ -106,6 +106,27 @@ function draw(){
   playerNameElem.innerText = currentPlayer.name
 
 }
+
+function setPlayer(event){
+  event.preventDefault()
+  let form = event.target
+
+  let playerName = form.playerName.value
+
+  currentPlayer = players.find(player => player.name == playerName)
+
+  if(!currentPlayer){
+    currentPlayer ={name: playerName, topScore: 0}
+   players.push(currentPlayer)
+   savePlayers()
+  }
+  
+  form.reset()
+  document.getElementById("game").classList.remove("hidden")
+  form.classList.add("hidden")
+  draw()
+  drawScoreboard()
+}
 function changePlayer(){
   document.getElementById("player-form").classList.remove("hidden")
   document.getElementById("game").classList.add("hidden")
