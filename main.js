@@ -148,12 +148,12 @@ function drawScoreboard(){
   players.sort((p1, p2) => p2.topScore - p1.topScore)
   players.forEach(player => {
     template += `
-    <div class="d-flex space-between">
+    <div class="d-flex justify-content-between">
         <span>
-          <i class="fa fa-user"></i>
+          <i class="fa fa-user m-2 p-2"></i>
          ${player.name}
         </span>
-        <span>Score: ${player.topScore}</span>
+        <span class="m-2 p-2">Score: ${player.topScore}</span>
       </div>
     `
   })
