@@ -106,7 +106,7 @@ function draw(){
   playerNameElem.innerText = currentPlayer.name
 
 }
-
+let players = []
 function setPlayer(event){
   event.preventDefault()
   let form = event.target
