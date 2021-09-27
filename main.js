@@ -107,6 +107,7 @@ function draw(){
 
 }
 let players = []
+loadPlayers()
 function setPlayer(event){
   event.preventDefault()
   let form = event.target
