@@ -61,32 +61,37 @@
     </div>
   </div>
 
-  <div id="game-controls" class="hidden">
+  <div class="row m-4">
+    <div class="col-12 d-flex justify-content-center">
 
-    <div>
-      <span>Balloons Popped:</span>
-      <span id="pop-count">0</span>
-      </div>
+      <div id="game-controls" class="hidden">
     
-    <div>
-      <span>Time Remaining:</span>
-      <span id="countdown">0</span>
-      </div>
-
-      <div class="game-container d-flex">
-        <div class="pump" onclick="inflate()">
-          <div class="handle"></div>
-          <div class="pump-box">
-            <span id="click-count"></span>
+        <div>
+          <span>Balloons Popped:</span>
+          <span id="pop-count">0</span>
           </div>
+        
+        <div>
+          <span>Time Remaining:</span>
+          <span id="countdown">0</span>
+          </div>
+    
+          <div class="game-container d-flex">
+            <div class="pump" onclick="inflate()">
+              <div class="handle"></div>
+              <div class="pump-box">
+                <span id="click-count"></span>
+              </div>
+            </div>
+            <div id="balloon" class="balloon"> </div>
+            <audio id="pop-sound" src="burst.mp3"></audio>
+          </div>
+         
         </div>
-        <div id="balloon" class="balloon"> </div>
-        <audio id="pop-sound" src="burst.mp3"></audio>
-      </div>
-     
     </div>
+  </div>
 
-  <div id="scoreboard" class="card mx-5 shadow">
+  <div id="scoreboard" class="card mx-5 m-4 shadow">
     <u>
 
       <h3 class="text-center">Scoreboard:</h3>
